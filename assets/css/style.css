@@ -1,0 +1,118 @@
+/* CSS Untuk Mengatur Tata Letak dan Gaya Halaman Web */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #16A085; /* Warna background navbar menjadi hijau */
+    border-bottom: none; /* Hilangkan garis bawah pada navbar */
+}
+
+nav .navbar-brand {
+    font-family: 'Impact', sans-serif;
+    color: white; /* Pastikan teks "Penerimaan Mahasiswa Baru STKIPNU" juga berwarna putih */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Mengubah warna teks navigasi menjadi putih */
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover::after {
+    background-color: #ffc107; /* Ubah warna garis bawah pada hover menjadi kuning */
+}
+
+.background-image {
+    background-image: url('assets/img/background.jpg'); /* Path ke gambar */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi latar belakang */
+}
+
+.background-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.section h2, .section h3 {
+    color: #16A085; /* Mengubah warna teks menjadi hijau */
+    margin-bottom: 20px;
+}
+
+.section p, .section ul, .section ol {
+    margin-bottom: 15px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Tambahkan scroll horizontal jika tabel lebih besar dari layar */
+}
+
+footer {
+    background-color: #16A085; /* Ubah warna background footer menjadi hijau */
+    color: white;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Query untuk memastikan tabel tetap berada di tengah pada tampilan mobile */
+@media (max-width: 768px) {
+    .table-responsive {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
